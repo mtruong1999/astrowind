@@ -1,22 +1,22 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'Abq Home Buyers'
+  site: 'https://abqhomebuyers.com'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: Fo1xY4f4IzqsncDhbkk8ro-Nr0-v04CftSPzpHN7Cc0
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'Abq Home Buyers'
+    template: '%s — Abq Home Buyers'
+  description: "\U0001F680 We are ABQ real estate investors that buy houses in Albuquerque fast for cash in any condition and any situation."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 'Abq Home Buyers'
     images:
       - url: '~/assets/images/default.png'
         width: 1200

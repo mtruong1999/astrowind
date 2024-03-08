@@ -11,9 +11,10 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import ContactUs from '~/components/widgets/Contact2.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'ABQ Home Buyers - We buy houses in Albuquerque, NM fast for cash!',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,7 +22,8 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
+  <!-- <Hero
+    id="contact-us"
     actions={[
       {
         variant: 'primary',
@@ -33,77 +35,231 @@ const metadata = {
       { text: 'Learn more', href: '#features' },
     ]}
     image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+  > -->
+  <Hero
+    actions={[
+      { text: 'Learn more', variant: 'primary', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      We buy houses in Albuquerque!
+      <!-- <span class="text-accent dark:text-white highlight">Albuquerque</span>! -->
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+       Sell your house fast for cash in any condition!
+    </Fragment>
+    <Fragment slot='content'>
+      <ContactUs
+        id="contact-us"
+        title=""
+        subtitle=""
+        tagline=""
+        inputs={[
+          {
+            type: 'text',
+            name: 'name',
+            label: 'Name',
+          },
+          {
+            type: 'text',
+            name: 'address',
+            label: 'Property Address'
+          },
+          {
+            type: 'email',
+            name: 'email',
+            label: 'Email',
+          },
+          {
+            type: 'tel',
+            name: 'phone',
+            label: 'Phone Number'
+          },
+        ]}
+        description="Our team will reach out to you within 24 hours."
+        button="Get My Fair Cash Offer 💰"
+      />
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <Features2
+    id="features"
+    title="Sell Your House Fast - In Any Condition!"
+    subtitle="Regardless of your situation, we will help get you the most money for your property in the shortest amount of time. We specialize in purchasing houses regardless of their condition or price range, making cash offers. We make it easy to sell your house fast without having to worry about making any repairs."
+    tagline=""
+    items={[
+      {
+        title: 'Any Reason',
+        description: "Inheritance, Foreclosure, Divorce, Downsizing/Upgrading, Relocation, Bankruptcy",
+        icon: 'flat-color-icons:inspection',
+      },
+      {
+        title: 'Any Condition',
+        description:
+          "New Houses, Old or Outdated Homes, Fire Damage, Termite Damage, Major Repairs needed, Problem Tenants, Unfinished Construction",
+        icon: 'flat-color-icons:home',
+      },
+      {
+        title: 'Any Challenge',
+        description:
+          'Code Violations, Hoarder House, Low Equity, Tax Liens, Late on Mortgage Payments, Title Issues',
+        icon: 'flat-color-icons:mind-map',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
-  <Note />
+  <Steps
+    title="Our Process"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Fill Out Our Form</span>',
+        description:
+          "No commitments. No hassles. Fill out our form with the proper information and our team will reach out to you within 24 hours!",
+        icon: 'tabler:pencil',
+      },
+      // {
+      //   title: 'Step 2: <span class="font-medium">Schedule an appointment</em>',
+      //   description:
+      //     "Using the information provided, we will contact you to setup an appointment to view your house as soon as possible",
+      //   icon: 'tabler:calendar-time',
+      // },
+      {
+        title: 'Step 2: <span class="font-medium">Receive Offer</span>',
+        description:
+          'We will present you with a fair, no obligation offer for your house in completely as-is condition',
+        icon: 'tabler:moneybag',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Close Quickly</span>',
+        description:
+          'We can close on your time frame with no commissions or closing fees!',
+        icon: 'tabler:clock-bolt',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1502005097973-6a7082348e28?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Modern Kitchen image',
+    }}
+  />
+
+  <Content
+    id="test" 
+    isReversed
+    tagline="About Us"
+    title="Who We Are"
+    items={[
+      {
+        title: 'Local',
+        description:
+          'We are a locally-owned, full service real estate solutions company based in Albuquerque, NM. Our founders were born and raised here in Albuquerque and our focus is on helping our neighbors find win-win solutions to any real estate challenge based on their individual situations.',
+      },
+      {
+        title: "Expert Resource",
+        description:
+          'We strive to be the best resource for New Mexico residents when it comes to the sale of their property. Our team of professionals is highly experienced in handling complex situations such as foreclosures, back-taxes, liens, probate, divorce, tired-landlord, and other challenging circumstances.',
+      },
+      {
+        title: "Flexible Solution",
+        description:
+          'We are both real estate investors and licensed New Mexico real estate brokers, so we have the unique flexibility to help a homeowner find the best solution to sell their home fast. When working with us, you can expect full transparency and honest communication throughout the entire process.',
+      }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1612225468547-80ec4aa6b98c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Albuquerque NE Heights Image',
+    }}
+  >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="Reasons Homeowners Like Working with Us"
+    subtitle="An all cash offer and fast close may be right for you"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Any Condition',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Avoid costly repairs to get your home in selling condition. We will buy it as-is!',
+        icon: 'tabler:clipboard-list',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Seamless Transaction',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Avoid the headaches and stresses from listing your home to the public. We are experienced and serious cash buyers!',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'No Fees',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Avoid costly selling fees. There are no commissions and we will pay for all of the closing costs!',
+        icon: 'tabler:free-rights',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Any Timeline',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'We can close as fast or as slow as you would like. You choose the closing date.',
+        icon: 'tabler:calendar-dollar',
       },
     ]}
   />
 
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle=""
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What types of property do you buy?',
+        description:
+          "We will consider all types of real estate in Albuquerque and throughout our state. We work with all price ranges and property tpes including single-family homes, condos, townhomes, apartment buildings, commercial properties, vacant lots, and mobile homes.",
+      },
+      {
+        title: 'Is there any obligation when I submit my information?',
+        description: "There is zero obligation. After we talk about your property and give you a fair all-cash offer, it is 100% your decision on whether or not you would like to proceed. We won't hassle or harass you!"
+      },
+      {
+        title: "Are there any fees or commissions to work with you?",
+        description: "Unlike many iBuyers or large home-buying corporations out there, we will not charge you any fee or commission for selling to us. We will even cover all of the closing costs as an added bonus!"
+      },
+      {
+        title: 'I have a rental that is causing me trouble, how can you help me?',
+        description:
+          'We are experienced landlords and can handle any deferred maintenance, property damage, junk properties, or tenant headaches you may have. We will even buy properties that have non-paying tenants!',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get My Fair Cash Offer',
+        href: '#contact-us',
+        icon: 'tabler:moneybag',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Fast Cash Offer For Your House in New Mexico!
+    </Fragment>
+  </CallToAction>
+
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
+    id="test" 
     isReversed
     tagline="Inside template"
     title="AstroWind's Blueprint: Fun Meets Functionality!"
@@ -139,7 +295,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  Content Widget ****************
 
   <Content
     isAfterContent
@@ -174,11 +330,11 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent
     items={[
@@ -212,45 +368,12 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Most used widgets"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
     tagline="Components"
@@ -310,21 +433,21 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Features2> -->
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
                         Astro is a very interesting technology. Thanks.
                 `}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <!-- <FAQs
     title="Frequently Asked Questions"
     subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
     tagline="FAQs"
@@ -361,39 +484,20 @@ const metadata = {
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
     ]}
-  />
+  /> -->
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
       { title: 'Stars', amount: '24.8K' },
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  
 </Layout>
