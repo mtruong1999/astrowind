@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -36,7 +37,7 @@ const metadata = {
     ]}
     image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
   > -->
-  <Hero
+  <!-- <Hero
     actions={[
       { text: 'Learn more', variant: 'primary', href: '#features' },
     ]}
@@ -44,7 +45,6 @@ const metadata = {
   >
     <Fragment slot="title">
       We buy houses in Albuquerque!
-      <!-- <span class="text-accent dark:text-white highlight">Albuquerque</span>! -->
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -82,8 +82,22 @@ const metadata = {
         button="Get My Fair Cash Offer 💰"
       />
     </Fragment>
-  </Hero>
+  </Hero> -->
+  <!-- TODO: extract contact from Hero3 and use content as above, also add back image -->
+  <Hero3
+    actions={[
+      { text: 'Learn more', variant: 'primary', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">
+      We buy houses in Albuquerque!
+    </Fragment>
 
+    <Fragment slot="subtitle">
+      Sell your house fast for cash in any condition!
+    </Fragment>
+
+  </Hero3>
   <Features2
     id="features"
     title="Sell Your House Fast - In Any Condition!"
