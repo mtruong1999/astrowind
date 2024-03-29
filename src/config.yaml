@@ -11,7 +11,7 @@ metadata:
   title:
     default: 'Abq Home Buyers'
     template: '%s — Abq Home Buyers'
-  description: "\U0001F680 We are ABQ real estate investors that buy houses in Albuquerque fast for cash in any condition and any situation."
+  description: "\U0001F680 We are ABQ real estate investors that buy houses in New Mexico fast for cash in any condition and any situation."
   robots:
     index: true
     follow: true
