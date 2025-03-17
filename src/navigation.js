@@ -190,6 +190,6 @@ export const footerData = {
   //   Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
   // `,
   footNote: `
-    Desert Conejo Acquisitions LLC is a licensed broker in the state of NM.
+    Some team members of Abq Home Buyers are licensed Real Estate Brokers in the State of New Mexico.
   `,
 };
